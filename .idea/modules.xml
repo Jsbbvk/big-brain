@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/trivia-sus.iml" filepath="$PROJECT_DIR$/.idea/trivia-sus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/big-brain.iml" filepath="$PROJECT_DIR$/.idea/big-brain.iml" />
     </modules>
   </component>
 </project>
