@@ -1,7 +1,20 @@
 enum ClassEnum {
   NoClass,
-  a,
-  b,
+  //samaritan classes
+  Sociopath,
+  Genius,
+  Speedrunner,
+  Benefactor,
+  Hunter,
+  Gifted,
+  //trickster classes
+  Berserker,
+  Megamind,
+  Hustler,
+  Flash,
+  Scout,
+  Vampire,
+  Talented,
 }
 
 export default ClassEnum;
