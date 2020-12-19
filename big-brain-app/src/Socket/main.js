@@ -3,7 +3,7 @@ import io from "socket.io-client";
 let socket = null;
 
 export const init_socket = async () => {
-    socket = await io(process.env.SOCKET_PORT);
+    socket = await io(process.env.SOCKET_PORT, { secure: false });
 };
 
 export const emission = async (emission, data) => {
