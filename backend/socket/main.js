@@ -8,7 +8,6 @@ const connect = (server) => {
         cors: {
             origin: "*",
         },
-        secure: true,
     });
     init();
 };
