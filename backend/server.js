@@ -17,6 +17,10 @@ app.use(bodyParser.json());
 app.use(express.json()); // to support JSON-encoded bodies
 app.use(express.urlencoded({ extended: true })); // to support URL-encoded bodies
 
+app.get("/", (req, res) => {
+    res.send("Hello World!");
+});
+
 require("./socket/main").default(http);
 
 const { setSessionToken } = require("./config/questions");
