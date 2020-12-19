@@ -1,7 +1,13 @@
 const express = require("express");
 const app = express();
 
-var http = require("http").createServer(app);
+var http = require("http").createServer(
+    {
+        requestCert: false,
+        rejectUnauthorized: false,
+    },
+    app
+);
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const { connectDB } = require("./config/db");
@@ -17,11 +23,11 @@ const { setSessionToken } = require("./config/questions");
 setSessionToken().then();
 
 connectDB()
-  .then((res) => {
-    http.listen(8080, () => {
-      console.log(`* Server is running on port: 8080`);
+    .then((res) => {
+        http.listen(8080, () => {
+            console.log(`* Server is running on port: 8080`);
+        });
+    })
+    .catch((rej) => {
+        console.log(rej);
     });
-  })
-  .catch((rej) => {
-    console.log(rej);
-  });
