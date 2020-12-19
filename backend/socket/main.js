@@ -7,6 +7,7 @@ const connect = (server) => {
     io = require("socket.io")(server, {
         cors: {
             origin: "*",
+            methods: ["GET", "POST"],
         },
     });
     init();
