@@ -3,7 +3,9 @@ import io from "socket.io-client";
 let socket = null;
 
 export const init_socket = async () => {
-    socket = await io.connect(process.env.SOCKET_PORT, { secure: true });
+    socket = await io.connect(process.env.SOCKET_PORT, {
+        rejectUnauthorized: false,
+    });
 };
 
 export const emission = async (emission, data) => {
