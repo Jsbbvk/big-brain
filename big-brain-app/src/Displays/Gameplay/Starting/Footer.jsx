@@ -3,11 +3,12 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     bottom: {
-        position: "absolute",
-        left: "50%",
-        bottom: "15px",
-        transform: "translateX(-50%)",
-        width: "90vw",
+        // position: "absolute",
+        // left: "50%",
+        // bottom: "15px",
+        // transform: "translateX(-50%)",
+        margin: "70px auto 15px auto",
+        //width: "90vw",
     },
 }));
 
