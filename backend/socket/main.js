@@ -26,7 +26,7 @@ const init = () => {
   dropRoomCollection().then((res) => console.log("reset room collection"));
 
   io.on("connection", (socket) => {
-    console.log("connected");
+    //console.log("connected");
 
     require("./room-socket")(socket);
     require("./player-socket")(socket);
@@ -34,13 +34,13 @@ const init = () => {
 
     socket.on("drop collections", () => {
       dropPlayerCollection().then((res) =>
-        console.log("reset player collection")
+        //console.log("reset player collection")
       );
       dropRoomCollection().then((res) => console.log("reset room collection"));
     });
 
     socket.on("disconnect", () => {
-      console.log("disconnected");
+      // console.log("disconnected");
     });
   });
 };
