@@ -5,6 +5,7 @@ let socket = null;
 export const init_socket = async () => {
     socket = await io(process.env.SOCKET_PORT, {
         secure: false,
+        transport: ["websocket"],
     });
 };
 

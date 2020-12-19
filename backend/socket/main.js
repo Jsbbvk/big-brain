@@ -6,7 +6,7 @@ const { dropCollection: dropRoomCollection } = require("../storage/room");
 const connect = (server) => {
     io = require("socket.io")(server, {
         cors: {
-            origin: "*",
+            origin: ["http://localhost:3000", "https://big-brain.cf"],
             methods: ["GET", "POST"],
         },
     });
